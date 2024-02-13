@@ -10,6 +10,7 @@ const buttonMultiply = document.querySelector("#buttonMultiply");
 const buttonEquals = document.querySelector("#buttonEquals");
 const buttonC = document.querySelector("#buttonC");
 const result = document.querySelector("#result");
+let moveCounter = 0
 
 // Random number generator
 let randomNum = Math.floor(Math.random() * 50) + 1;
@@ -21,34 +22,42 @@ targetNumberPlace.innerText = randomNum;
 
 button1.addEventListener("click", function(){
     result.innerText += 1
+    moveCounter += 1
 });
 
 button2.addEventListener("click", function(){
     result.innerText += 2
+    moveCounter += 1
 });
 
 button3.addEventListener("click", function(){
     result.innerText += 3
+    moveCounter += 1
 });
 
 button4.addEventListener("click", function(){
     result.innerText += 4
+    moveCounter += 1
 });
 
 buttonPlus.addEventListener("click", function(){
     result.innerText += "+"
+    moveCounter += 1
 });
 
 buttonMinus.addEventListener("click", function(){
     result.innerText += "-"
+    moveCounter += 1
 });
 
 buttonMultiply.addEventListener("click", function(){
     result.innerText += "*"
+    moveCounter += 1
 });
 
 buttonC.addEventListener("click", function(){
 result.innerText = null
+moveCounter = 0
 
 })
 
@@ -63,7 +72,7 @@ buttonEquals.addEventListener("click", function(){
 
     // Display the result
     if (randomNum === resultValue) {
-result.innerText = `${resultValue} \n \n Elle you did it`
+result.innerText = `You reached ${resultValue} in ${moveCounter} moves`
     }
     else {
         result.innerText = `${resultValue} \n \n Try again`

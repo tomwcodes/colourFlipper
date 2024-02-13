@@ -3,7 +3,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: 0;
 }
 
@@ -22,7 +21,7 @@ body {
   padding: 15px; /* Increased padding for better readability */
   margin-bottom: 20px;
   text-align: center;
-  font-size: 5vw; /* Increased font size for better visibility */
+  font-size: 4vw; /* Increased font size for better visibility */
 }
 
 #numbers {
@@ -38,7 +37,7 @@ button {
   border: none;
   padding: 15px; /* Increased padding for better touch targets */
   border-radius: 10px; /* Increased border radius for better aesthetics */
-  font-size: 5vw; /* Increased font size for better visibility */
+  font-size: 4vw; /* Increased font size for better visibility */
 }
 
 button:hover {
@@ -52,5 +51,5 @@ button:hover {
   padding: 20px; /* Increased padding for better visibility */
   margin-top: 20px;
   text-align: center;
-  font-size: 5vw; /* Increased font size for better visibility */
+  font-size: 4vw; /* Increased font size for better visibility */
 }
