@@ -11,13 +11,11 @@ const buttonEquals = document.querySelector("#buttonEquals");
 const buttonC = document.querySelector("#buttonC");
 const result = document.querySelector("#result");
 
-// Target Number Generator
-
-document.addEventListener("DOMContentLoaded", function(){
-    let targetNumberPlace = document.querySelector("#targetNumberPlace");
-    let randomNum = Math.floor(Math.random() * 50) + 1;
+// Random number generator
+let randomNum = Math.floor(Math.random() * 50) + 1;
+let targetNumberPlace = document.querySelector("#targetNumberPlace");
 targetNumberPlace.innerText = randomNum;
-})
+
 
 // Event Listeners
 
@@ -64,7 +62,15 @@ buttonEquals.addEventListener("click", function(){
     let resultValue = eval(expression);
 
     // Display the result
-    if (randomNum = resultValue) {
-result.innerText = `${randomNum}!! Elle you did it \n ps you have a great peach`
+    if (randomNum === resultValue) {
+result.innerText = `${resultValue} \n \n Elle you did it`
+    }
+    else {
+        result.innerText = `${resultValue} \n \n Try again`
     }
 });
+
+
+    // Log the values for debugging
+    console.log("Random Number:", randomNum);
+    console.log("Result Value:", resultValue);
