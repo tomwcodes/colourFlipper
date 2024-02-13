@@ -5,9 +5,9 @@ const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
 const button4 = document.querySelector("#button4");
 const buttonPlus = document.querySelector("#buttonPlus");
-const buttonMinus = document.querySelector("#buttonMinus");
 const buttonMultiply = document.querySelector("#buttonMultiply");
 const buttonEquals = document.querySelector("#buttonEquals");
+const buttonBack = document.querySelector("#buttonBack")
 const buttonC = document.querySelector("#buttonC");
 const result = document.querySelector("#result");
 let moveCounter = 0
@@ -21,43 +21,42 @@ targetNumberPlace.innerText = randomNum;
 // Event Listeners
 
 button1.addEventListener("click", function(){
-    result.innerText += 1
-    moveCounter += 1
+    result.innerText += 1;
+    moveCounter += 1;
 });
 
 button2.addEventListener("click", function(){
-    result.innerText += 2
-    moveCounter += 1
+    result.innerText += 2;
+    moveCounter += 1;
 });
 
 button3.addEventListener("click", function(){
-    result.innerText += 3
-    moveCounter += 1
+    result.innerText += 3;
+    moveCounter += 1;
 });
 
 button4.addEventListener("click", function(){
     result.innerText += 4
-    moveCounter += 1
+    moveCounter += 1;
 });
 
 buttonPlus.addEventListener("click", function(){
     result.innerText += "+"
-    moveCounter += 1
-});
-
-buttonMinus.addEventListener("click", function(){
-    result.innerText += "-"
-    moveCounter += 1
+    moveCounter += 1;
 });
 
 buttonMultiply.addEventListener("click", function(){
-    result.innerText += "*"
-    moveCounter += 1
+    result.innerText += "*";
+    moveCounter += 1;
+});
+
+buttonBack.addEventListener("click", function(){
+    result.innerText = result.innerText.slice(0, -1);
 });
 
 buttonC.addEventListener("click", function(){
-result.innerText = null
-moveCounter = 0
+result.innerText = null;
+moveCounter = 0;
 
 })
 
