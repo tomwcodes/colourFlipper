@@ -11,6 +11,7 @@ const buttonBack = document.querySelector("#buttonBack")
 const buttonC = document.querySelector("#buttonC");
 const result = document.querySelector("#result");
 let moveCounter = 0
+let stopInput = false
 
 // Random number generator
 let randomNum = Math.floor(Math.random() * 50) + 1;
@@ -21,38 +22,47 @@ targetNumberPlace.innerText = randomNum;
 // Event Listeners
 
 button1.addEventListener("click", function(){
+    if (!stopInput){
     result.innerText += 1;
     moveCounter += 1;
+    }
 });
 
 button2.addEventListener("click", function(){
+    if (!stopInput){
     result.innerText += 2;
     moveCounter += 1;
+    }
 });
 
 button3.addEventListener("click", function(){
+    if (!stopInput){
     result.innerText += 3;
     moveCounter += 1;
-});
+}});
 
 button4.addEventListener("click", function(){
+    if (!stopInput){
     result.innerText += 4
     moveCounter += 1;
-});
+}});
 
 buttonPlus.addEventListener("click", function(){
+    if (!stopInput){
     result.innerText += "+"
     moveCounter += 1;
-});
+}});
 
 buttonMultiply.addEventListener("click", function(){
+    if (!stopInput){
     result.innerText += "*";
     moveCounter += 1;
-});
+}});
 
 buttonBack.addEventListener("click", function(){
+    if (!stopInput){
     result.innerText = result.innerText.slice(0, -1);
-});
+}});
 
 buttonC.addEventListener("click", function(){
 result.innerText = null;
@@ -63,6 +73,7 @@ moveCounter = 0;
 // Calculation
 
 buttonEquals.addEventListener("click", function(){
+    stopInput = true;
     // Get the expression from the result element
     let expression = result.innerText;
 
