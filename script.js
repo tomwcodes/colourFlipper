@@ -65,6 +65,7 @@ buttonBack.addEventListener("click", function(){
 buttonC.addEventListener("click", function(){
 result.innerText = null;
 moveCounter = 0;
+stopInput = false
 
 })
 
