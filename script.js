@@ -50,13 +50,11 @@ button4.addEventListener("click", function(){
 buttonPlus.addEventListener("click", function(){
     if (!stopInput){
     result.innerText += "+"
-    moveCounter += 1;
 }});
 
 buttonMultiply.addEventListener("click", function(){
     if (!stopInput){
     result.innerText += "*";
-    moveCounter += 1;
 }});
 
 buttonBack.addEventListener("click", function(){
