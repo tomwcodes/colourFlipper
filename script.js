@@ -5,6 +5,7 @@ const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
 const button4 = document.querySelector("#button4");
 const buttonPlus = document.querySelector("#buttonPlus");
+const buttonMinus = document.querySelector("#buttonMinus");
 const buttonMultiply = document.querySelector("#buttonMultiply");
 const buttonEquals = document.querySelector("#buttonEquals");
 const buttonBack = document.querySelector("#buttonBack")
@@ -55,6 +56,12 @@ button4.addEventListener("click", function(){
 buttonPlus.addEventListener("click", function(){
     if (!stopInput){
     result.innerText += "+"
+    stopNumInput = false;
+}});
+
+buttonMinus.addEventListener("click", function(){
+    if (!stopInput){
+    result.innerText += "-"
     stopNumInput = false;
 }});
 
